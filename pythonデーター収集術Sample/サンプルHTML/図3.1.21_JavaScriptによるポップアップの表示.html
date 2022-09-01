@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>JavaScriptの例</title>
+    </head>
+    <body>
+        <script>
+            function inputCheck() {
+                if(document.myform.searchtext.value==""){
+                    alert("検索条件を入力してください。");
+                    return false;
+                }
+                return true;
+            }
+        </script> 
+        <form method="post" action="送信先URL" name="myform" onsubmit="return inputCheck()">                   
+            <input type="text" name="searchtext" size="30" maxlength="30">
+            <input type="submit" value="検索">
+        </form>
+    </body>
+</html>
